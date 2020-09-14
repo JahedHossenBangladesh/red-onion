@@ -26,7 +26,7 @@ function App() {
               <Link to="/Dinner">Dinner</Link>
             </li>
             <li>
-              <Link to="/Breakfast">Users</Link>
+              <Link to="/Breakfast">Breakfast</Link>
             </li>
           </ul>
         </nav>
