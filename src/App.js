@@ -18,8 +18,8 @@ function App() {
    <Router>
       <div>
         <nav>
-          <ul>
-            <li>
+          <ul className="ul-no-style">
+            <li >
               <Link to="/">Lunch</Link>
             </li>
             <li>

@@ -1,29 +1,29 @@
 import React, { useEffect, useState } from 'react';
+import FoodItem from '../../FoodItem/FoodItem';
 import Data from '../FakeData/fakeData'
 
 const Lunch = () => {
     const [takedata,setTakeData] = useState(Data);
     const [fooditem,setFooditem] = useState([]);
     const [category,setCategory] = useState('lunch');
-    console.log(Data);
-    console.log(category);
- console.log(takedata);
-useEffect( () => {
+   useEffect( () => {
     const lunchData = takedata.filter(food => food.category === category   //'lunch'
      );
     setFooditem(lunchData);
-      console.log(lunchData);
 
-},[category]);
 
-console.log(fooditem);
+},[category,takedata]);
+
+console.log(fooditem,"food");
 
 
 
 
     return (
-        <div>
-            <h1>This is Lunch</h1>
+        <div className="row" >
+        {
+            fooditem.map(lunch => <FoodItem data={lunch}></FoodItem>)
+        }
       
         </div>
     );
